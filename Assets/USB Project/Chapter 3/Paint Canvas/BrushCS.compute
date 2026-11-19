@@ -1,0 +1,26 @@
+#pragma kernel CSClear
+#pragma kernel CSPaint
+
+RWTexture2D<float4> Canvas;
+
+float4 ClearColor;
+float4 BrushColor;
+float2 BrushPosition;
+float BrushRadius;
+float BrushSmooth;
+
+[numthreads(8,8,1)]
+void CSClear (uint3 id : SV_DispatchThreadID)
+{
+    Canvas[id.xy] = ClearColor;
+}
+
+[numthreads(8,8,1)]
+void CSPaint (uint3 id : SV_DispatchThreadID)
+{
+    float dist = length(float2(id.xy) - BrushPosition);
+    float mask = 1.0 - smoothstep(BrushRadius - BrushSmooth, BrushRadius, dist);
+
+    float4 previous = Canvas[id.xy];
+    Canvas[id.xy] = lerp(previous, BrushColor, mask);
+}

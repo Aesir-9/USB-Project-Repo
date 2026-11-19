@@ -1,0 +1,32 @@
+	Jettelly The Unity Shaders Bible | Second Edition.
+	
+	Created and distributed by Jettelly Inc. (www.jettelly.com)
+	Version : Unity Engine 6000.4.2f1
+	
+	Date : 2025-10-02 first push
+	Date : 2025-11-13 (update) Shader Graph and ShaderLab properties
+	Date : 2026-02-03 (update) View to Tangent space
+	Date : 2026-03-31 (update) Custom Lighting URP
+	Date : 2026-05-07 (update) Custom Specular
+	Date : 2026-06-01 (update) Matcap and ShaderGUI
+	Date : 2026-06-24 (update) Compute Shaders and Ray Marching
+	Date : 2026-07-22 (update) Water effect and Lightning Bolt
+	Date : 2026-07-30 (update) Transparency based position and Stencil
+	Date : 2026-09-03 (update) Added VFX portal to the package 
+	Date : 2026-09-22 (update) Added VFX Flare Lights
+
+		---
+	
+	License : While this book is protected by copyright, the assets and code 
+    can be used freely, both in personal and commercial projects, provided that 
+    the reader has obtained an original copy of this book. This license is 
+    granted on an individual basis to the original purchaser and does not permit 
+    resale, sharing, or redistribution of the assets or code, in whole or in 
+    part, to any third party.
+
+		---	
+
+	• https://jettelly.com/
+	• https://www.linkedin.com/company/jettelly
+	• https://x.com/ushadersbible
+	• https://x.com/jettelly

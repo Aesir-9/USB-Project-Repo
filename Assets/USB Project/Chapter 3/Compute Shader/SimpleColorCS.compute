@@ -1,0 +1,17 @@
+#pragma kernel CSMain
+
+RWTexture2D<float4> Result;
+Texture2D<float4> Albedo;
+SamplerState sampler_Albedo;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    uint u;
+    uint v;
+    Result.GetDimensions(u, v);
+    float2 uv = float2(id.xy / float2(u, v));
+    float4 albedo = Albedo.SampleLevel(sampler_Albedo, uv, 0);
+    
+    Result[id.xy] = albedo;
+}
